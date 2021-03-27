@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@book-club/api-interfaces": ["libs/api-interfaces/src/index.ts"]
+      "@book-club/api-interfaces": ["libs/api-interfaces/src/index.ts"],
+      "@book-club/models": ["libs/models/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

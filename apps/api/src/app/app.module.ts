@@ -1,8 +1,11 @@
+import { MeetingStatus } from '@book-club/models';
 import { Module } from '@nestjs/common';
 import { SequelizeModule } from '@nestjs/sequelize';
+import { Sequelize } from 'sequelize-typescript';
 
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { Club } from './club/club.model';
+import { Meeting } from './meeting/meeting.model';
+import { Reader } from './reader/reader.model';
 
 const {
   DB_USERNAME: username,
@@ -21,10 +24,11 @@ const {
       username,
       password,
       database,
-      models: [],
+      define: { freezeTableName: true, timestamps: false },
+      sync: { alter: true },
+      models: [Reader, Club, Meeting],
+      logging: false,
     }),
   ],
-  controllers: [AppController],
-  providers: [AppService],
 })
 export class AppModule {}
