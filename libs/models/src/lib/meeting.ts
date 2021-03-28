@@ -6,6 +6,6 @@ export enum MeetingStatus {
 }
 
 export interface IMeeting {
-  book_id: string;
-  status: MeetingStatus;
+  book_id: string
+  status: MeetingStatus
 }

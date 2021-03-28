@@ -1,11 +1,9 @@
-import { MeetingStatus } from '@book-club/models';
-import { Module } from '@nestjs/common';
-import { SequelizeModule } from '@nestjs/sequelize';
-import { Sequelize } from 'sequelize-typescript';
+import { Module } from '@nestjs/common'
+import { SequelizeModule } from '@nestjs/sequelize'
 
-import { Club } from './club/club.model';
-import { Meeting } from './meeting/meeting.model';
-import { Reader } from './reader/reader.model';
+import { Club } from './club/club.model'
+import { Meeting } from './meeting/meeting.model'
+import { Reader } from './reader/reader.model'
 
 const {
   DB_USERNAME: username,
@@ -13,7 +11,7 @@ const {
   DB_DATABASE: database,
   DB_HOST: host,
   DB_PORT: port,
-} = process.env;
+} = process.env
 
 @Module({
   imports: [
