@@ -1,13 +1,13 @@
 import {
   AllowNull,
   Column,
+  DataType,
   IsIn,
   Length,
   Model,
   Table,
 } from 'sequelize-typescript'
 import { IClub, Visibility } from '@book-club/models'
-import { DataType } from 'sequelize-typescript'
 
 const visibilityValues = Object.values(Visibility)
 

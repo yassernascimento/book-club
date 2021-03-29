@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common'
 import { SequelizeModule } from '@nestjs/sequelize'
 
-import { Club } from './club/club.model'
-import { Meeting } from './meeting/meeting.model'
-import { Reader } from './reader/reader.model'
+import { Club, ClubService } from './club'
+import { Meeting, MeetingService } from './meeting'
+import { Reader, ReaderService } from './reader'
 
 const {
   DB_USERNAME: username,
@@ -28,5 +28,6 @@ const {
       logging: false,
     }),
   ],
+  providers: [ClubService, MeetingService, ReaderService],
 })
 export class AppModule {}

@@ -2,12 +2,12 @@ import {
   AllowNull,
   Column,
   Default,
+  DataType,
   IsIn,
   Model,
   Table,
 } from 'sequelize-typescript'
 import { IMeeting, MeetingStatus } from '@book-club/models'
-import { DataType } from 'sequelize-typescript'
 
 const meetingStatusValues = Object.values(MeetingStatus)
 

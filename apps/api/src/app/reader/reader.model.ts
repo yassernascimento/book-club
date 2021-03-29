@@ -1,6 +1,7 @@
 import {
   AllowNull,
   Column,
+  DataType,
   IsEmail,
   IsIn,
   Length,
@@ -9,7 +10,6 @@ import {
   Unique,
 } from 'sequelize-typescript'
 import { Gender, IReader } from '@book-club/models'
-import { DataType } from 'sequelize-typescript'
 
 const genderValues = Object.values(Gender)
 

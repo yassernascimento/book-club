@@ -1,15 +1,16 @@
-/**
- * This is not a production server yet!
- * This is only a minimal backend to get started.
- */
-
 import { Logger } from '@nestjs/common'
 import { NestFactory } from '@nestjs/core'
 
 import { AppModule } from './app/app.module'
 
+const isTestingEnv = process.env.NODE_ENV === 'test'
+const disableLogger = { logger: false }
+const nestOptions = isTestingEnv ? { ...disableLogger } : {}
+
+export const getApp = () => NestFactory.create(AppModule, nestOptions)
+
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule)
+  const app = await getApp()
   const globalPrefix = 'api'
   app.setGlobalPrefix(globalPrefix)
   const port = process.env.PORT || 3333
@@ -18,4 +19,6 @@ async function bootstrap() {
   })
 }
 
-bootstrap()
+if (!isTestingEnv) {
+  bootstrap()
+}
