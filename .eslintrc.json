@@ -21,7 +21,19 @@
     {
       "files": ["*.ts", "*.tsx"],
       "extends": ["plugin:@nrwl/nx/typescript"],
-      "rules": {}
+      "rules": {
+        "sort-keys": ["warn", "asc", { "natural": true }],
+        "sort-vars": ["warn", { "ignoreCase": true }],
+        "sort-imports": [
+          "warn",
+          {
+            "memberSyntaxSortOrder": ["none", "all", "single", "multiple"],
+            "allowSeparatedGroups": true
+          }
+        ],
+        "@typescript-eslint/explicit-function-return-type": ["warn"],
+        "@typescript-eslint/prefer-enum-initializers": ["warn"]
+      }
     },
     {
       "files": ["*.js", "*.jsx"],

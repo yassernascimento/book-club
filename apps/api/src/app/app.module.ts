@@ -1,5 +1,6 @@
 import { Module } from '@nestjs/common'
 import { SequelizeModule } from '@nestjs/sequelize'
+import { UtilDatabaseModule } from '@book-club/util-database'
 
 import { Club, ClubService } from './club'
 import { Meeting, MeetingService } from './meeting'
@@ -16,17 +17,18 @@ const {
 @Module({
   imports: [
     SequelizeModule.forRoot({
-      dialect: 'postgres',
-      host,
-      port: +port,
-      username,
-      password,
       database,
       define: { freezeTableName: true, timestamps: false },
-      sync: { alter: true },
-      models: [Reader, Club, Meeting],
+      dialect: 'postgres',
+      host,
       logging: false,
+      models: [Reader, Club, Meeting],
+      password,
+      port: +port,
+      sync: { alter: true },
+      username,
     }),
+    UtilDatabaseModule, // testing only
   ],
   providers: [ClubService, MeetingService, ReaderService],
 })
