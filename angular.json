@@ -223,6 +223,19 @@
           }
         }
       }
+    },
+    "util-database": {
+      "root": "libs/util-database",
+      "sourceRoot": "libs/util-database/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/util-database/**/*.ts"]
+          }
+        }
+      }
     }
   }
 }

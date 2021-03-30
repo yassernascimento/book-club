@@ -16,7 +16,8 @@
     "baseUrl": ".",
     "paths": {
       "@book-club/api-interfaces": ["libs/api-interfaces/src/index.ts"],
-      "@book-club/models": ["libs/models/src/index.ts"]
+      "@book-club/models": ["libs/models/src/index.ts"],
+      "@book-club/util-database": ["libs/util-database/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
