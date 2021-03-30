@@ -5,6 +5,7 @@ export enum Gender {
 }
 
 export interface IReader {
+  id?: string
   name: string
   email: string
   gender: Gender

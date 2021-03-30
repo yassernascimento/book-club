@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common'
 import { SequelizeModule } from '@nestjs/sequelize'
 import { UtilDatabaseModule } from '@book-club/util-database'
 
+import { ClubReader } from './club-reader'
 import { Club, ClubService } from './club'
 import { Meeting, MeetingService } from './meeting'
 import { Reader, ReaderService } from './reader'
@@ -22,7 +23,7 @@ const {
       dialect: 'postgres',
       host,
       logging: false,
-      models: [Reader, Club, Meeting],
+      models: [Reader, Club, Meeting, ClubReader],
       password,
       port: +port,
       sync: { alter: true },

@@ -1,9 +1,11 @@
 import { UUIDV4 } from 'sequelize'
 import {
   AllowNull,
+  BelongsTo,
   Column,
   DataType,
   Default,
+  ForeignKey,
   IsIn,
   IsUUID,
   Model,
@@ -11,6 +13,8 @@ import {
   Table,
 } from 'sequelize-typescript'
 import { IMeeting, MeetingStatus } from '@book-club/models'
+
+import { Club } from '../club'
 
 const meetingStatusValues = Object.values(MeetingStatus)
 
@@ -32,4 +36,12 @@ export class Meeting extends Model implements IMeeting {
   @AllowNull(false)
   @Column(DataType.STRING)
   status: MeetingStatus
+
+  @AllowNull(false)
+  @ForeignKey(() => Club)
+  @Column(DataType.UUID)
+  club_id: string
+
+  @BelongsTo(() => Club)
+  club: Club
 }

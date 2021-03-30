@@ -1,3 +1,5 @@
+export * from './club-reader.interface'
+export * from './club-reader.mock'
 export * from './club.interface'
 export * from './club.mock'
 export * from './meeting.interface'

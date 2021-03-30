@@ -1,6 +1,7 @@
 import { UUIDV4 } from 'sequelize'
 import {
   AllowNull,
+  BelongsToMany,
   Column,
   DataType,
   Default,
@@ -14,6 +15,9 @@ import {
   Unique,
 } from 'sequelize-typescript'
 import { Gender, IReader } from '@book-club/models'
+
+import { Club } from '../club'
+import { ClubReader } from '../club-reader/club-reader.model'
 
 const genderValues = Object.values(Gender)
 
@@ -41,4 +45,7 @@ export class Reader extends Model implements IReader {
   @AllowNull(false)
   @Column(DataType.STRING)
   gender: Gender
+
+  @BelongsToMany(() => Club, () => ClubReader)
+  clubs: Club[]
 }

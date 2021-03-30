@@ -4,6 +4,7 @@ export enum Visibility {
 }
 
 export interface IClub {
+  id?: string
   name: string
   description?: string
   visibility: Visibility

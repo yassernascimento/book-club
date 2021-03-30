@@ -3,7 +3,7 @@ import { UtilDatabaseService } from './util-database.service'
 
 @Module({
   controllers: [],
-  providers: [UtilDatabaseService],
   exports: [UtilDatabaseService],
+  providers: [UtilDatabaseService],
 })
 export class UtilDatabaseModule {}

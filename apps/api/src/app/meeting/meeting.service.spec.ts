@@ -1,6 +1,6 @@
 import { INestApplication } from '@nestjs/common'
 import { UtilDatabaseService } from '@book-club/util-database'
-import { meetingMock } from '@book-club/models'
+import { clubMock, meetingMock } from '@book-club/models'
 
 import { MeetingService } from '.'
 import { getApp } from '../../main'
@@ -21,7 +21,11 @@ afterAll(() => app.close())
 
 describe('create', () => {
   test('should create a meeting', async () => {
-    const meeting = meetingMock.build()
+    const clubUuid = '11bf5b37-e0b8-42e0-8dcf-dc8c4aefc000'
+    const clubModel = clubMock.build({ id: clubUuid })
+    await database.inject({ Club: [clubModel] })
+
+    const meeting = meetingMock.build({ club_id: clubUuid })
     const meetingCreated = await service.create(meeting)
 
     expect(meetingCreated).toEqual(
