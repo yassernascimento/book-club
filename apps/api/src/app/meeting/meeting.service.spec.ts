@@ -1,6 +1,6 @@
+import { clubMock, meetingMock } from '@book-club/models'
 import { INestApplication } from '@nestjs/common'
 import { UtilDatabaseService } from '@book-club/util-database'
-import { clubMock, meetingMock } from '@book-club/models'
 
 import { MeetingService } from '.'
 import { getApp } from '../../main'

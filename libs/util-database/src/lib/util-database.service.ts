@@ -1,6 +1,6 @@
+import { IClub, IClubReader, IMeeting, IReader } from '@book-club/models'
 import { Injectable } from '@nestjs/common'
 import { Sequelize } from 'sequelize-typescript'
-import { IClub, IClubReader, IMeeting, IReader } from '@book-club/models'
 
 type InjectPayload = Partial<{
   Club: IClub[]
@@ -11,7 +11,7 @@ type InjectPayload = Partial<{
 
 @Injectable()
 export class UtilDatabaseService {
-  constructor(private sequelize: Sequelize) {}
+  public constructor(private sequelize: Sequelize) {}
 
   public async clean(): Promise<void> {
     await this.sequelize.sync({ force: true })

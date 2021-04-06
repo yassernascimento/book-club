@@ -1,4 +1,3 @@
-import { UUIDV4 } from 'sequelize'
 import {
   AllowNull,
   BelongsToMany,
@@ -15,6 +14,7 @@ import {
   Unique,
 } from 'sequelize-typescript'
 import { Gender, IReader } from '@book-club/models'
+import { UUIDV4 } from 'sequelize'
 
 import { Club } from '../club'
 import { ClubReader } from '../club-reader/club-reader.model'
@@ -28,24 +28,24 @@ export class Reader extends Model implements IReader {
   @AllowNull(false)
   @PrimaryKey
   @Column(DataType.UUID)
-  id: string
+  public id: string
 
   @Length({ max: undefined, min: 4 })
   @AllowNull(false)
   @Column
-  name: string
+  public name: string
 
   @IsEmail
   @Unique
   @AllowNull(false)
   @Column
-  email: string
+  public email: string
 
   @IsIn([genderValues])
   @AllowNull(false)
   @Column(DataType.STRING)
-  gender: Gender
+  public gender: Gender
 
   @BelongsToMany(() => Club, () => ClubReader)
-  clubs: Club[]
+  public clubs: Club[]
 }

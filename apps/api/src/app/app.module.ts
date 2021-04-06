@@ -1,11 +1,12 @@
-import { Module } from '@nestjs/common'
+import { HttpModule, Module } from '@nestjs/common'
 import { SequelizeModule } from '@nestjs/sequelize'
 import { UtilDatabaseModule } from '@book-club/util-database'
 
-import { ClubReader } from './club-reader'
 import { Club, ClubService } from './club'
 import { Meeting, MeetingService } from './meeting'
 import { Reader, ReaderService } from './reader'
+import { BookService } from './book/book.service'
+import { ClubReader } from './club-reader'
 
 const {
   DB_USERNAME: username,
@@ -29,8 +30,9 @@ const {
       sync: { alter: true },
       username,
     }),
+    HttpModule,
     UtilDatabaseModule, // testing only
   ],
-  providers: [ClubService, MeetingService, ReaderService],
+  providers: [ClubService, MeetingService, ReaderService, BookService],
 })
 export class AppModule {}

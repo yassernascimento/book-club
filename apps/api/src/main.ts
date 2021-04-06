@@ -1,5 +1,5 @@
-import { NestFactory } from '@nestjs/core'
 import { INestApplication, Logger } from '@nestjs/common'
+import { NestFactory } from '@nestjs/core'
 
 import { AppModule } from './app/app.module'
 

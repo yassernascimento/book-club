@@ -1,4 +1,3 @@
-import { UUIDV4 } from 'sequelize'
 import {
   AllowNull,
   BelongsToMany,
@@ -14,6 +13,7 @@ import {
   Table,
 } from 'sequelize-typescript'
 import { IClub, Visibility } from '@book-club/models'
+import { UUIDV4 } from 'sequelize'
 
 import { ClubReader } from '../club-reader'
 import { Meeting } from '../meeting'
@@ -28,21 +28,21 @@ export class Club extends Model implements IClub {
   @AllowNull(false)
   @PrimaryKey
   @Column(DataType.UUID)
-  id: string
+  public id: string
 
   @Length({ max: 20, min: 2 })
   @AllowNull(false)
   @Column
-  name: string
+  public name: string
 
   @IsIn([visibilityValues])
   @AllowNull(false)
   @Column(DataType.STRING)
-  visibility: Visibility
+  public visibility: Visibility
 
   @HasMany(() => Meeting)
-  meetings: Meeting[]
+  public meetings: Meeting[]
 
   @BelongsToMany(() => Reader, () => ClubReader)
-  readers: Reader[]
+  public readers: Reader[]
 }

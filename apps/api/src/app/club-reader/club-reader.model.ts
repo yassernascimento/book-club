@@ -19,15 +19,15 @@ export class ClubReader extends Model implements IClubReader {
   @AllowNull(false)
   @ForeignKey(() => Club)
   @Column(DataType.UUID)
-  club_id: string
+  public club_id: string
 
   @AllowNull(false)
   @ForeignKey(() => Reader)
   @Column(DataType.UUID)
-  reader_id: string
+  public reader_id: string
 
   @IsIn([clubRoleValues])
   @AllowNull(false)
   @Column(DataType.STRING)
-  role: ClubRole
+  public role: ClubRole
 }

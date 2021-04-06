@@ -1,6 +1,6 @@
 import { Factory } from 'fishery'
 
-import { IMeeting, MeetingStatus } from '.'
+import { IMeeting, MeetingStatus } from '..'
 
 export const meetingMock = Factory.define<IMeeting>(({ sequence }) => ({
   book_id: `${sequence}`,

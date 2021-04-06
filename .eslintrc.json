@@ -24,15 +24,11 @@
       "rules": {
         "sort-keys": ["warn", "asc", { "natural": true }],
         "sort-vars": ["warn", { "ignoreCase": true }],
-        "sort-imports": [
-          "warn",
-          {
-            "memberSyntaxSortOrder": ["none", "all", "single", "multiple"],
-            "allowSeparatedGroups": true
-          }
-        ],
+        "sort-imports": ["warn", { "allowSeparatedGroups": true }],
         "@typescript-eslint/explicit-function-return-type": ["warn"],
-        "@typescript-eslint/prefer-enum-initializers": ["warn"]
+        "@typescript-eslint/prefer-enum-initializers": ["warn"],
+        "@typescript-eslint/explicit-member-accessibility": ["warn"],
+        "@typescript-eslint/member-ordering": ["warn"]
       }
     },
     {
