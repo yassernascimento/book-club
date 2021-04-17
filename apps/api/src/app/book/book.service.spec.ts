@@ -16,7 +16,7 @@ describe('books', () => {
 })
 
 describe('byId', () => {
-  test('shouldreturn a books', async () => {
+  test('should return a book', async () => {
     const id = 'zyTCAlFPjgYC'
     expect(await service.byId(id)).toBeInstanceOf(Object)
   })
