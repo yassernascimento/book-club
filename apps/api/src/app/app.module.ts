@@ -6,6 +6,7 @@ import { Club, ClubModule } from './club'
 import { Meeting, MeetingModule } from './meeting'
 import { Reader, ReaderModule } from './reader'
 import { BookModule } from './book'
+import { ChatModule } from './chat'
 import { ClubReader } from './club-reader'
 
 const {
@@ -31,6 +32,7 @@ const {
       username,
     }),
     BookModule,
+    ChatModule,
     ClubModule,
     MeetingModule,
     ReaderModule,
