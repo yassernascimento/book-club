@@ -60,6 +60,10 @@
                 {
                   "replace": "apps/book-club-app/src/environments/environment.ts",
                   "with": "apps/book-club-app/src/environments/environment.prod.ts"
+                },
+                {
+                  "replace": "apps/book-club-app/src/app/core/external-modules/index.ts",
+                  "with": "apps/book-club-app/src/app/core/external-modules/index.prod.ts"
                 }
               ],
               "optimization": true,
@@ -72,8 +76,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
+                  "maximumWarning": "1mb",
+                  "maximumError": "3mb"
                 },
                 {
                   "type": "anyComponentStyle",
