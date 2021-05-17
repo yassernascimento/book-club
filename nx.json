@@ -1,29 +1,46 @@
 {
   "implicitDependencies": {
     "angular.json": "*",
-    "package.json": { "dependencies": "*", "devDependencies": "*" },
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
     "tsconfig.base.json": "*",
     "tslint.json": "*",
     ".eslintrc.json": "*",
     "nx.json": "*"
   },
-  "affected": { "defaultBase": "master" },
+  "affected": {
+    "defaultBase": "master"
+  },
   "npmScope": "book-club",
   "tasksRunnerOptions": {
     "default": {
       "runner": "@nrwl/workspace/tasks-runners/default",
-      "options": { "cacheableOperations": ["build", "lint", "test", "e2e"] }
+      "options": {
+        "cacheableOperations": ["build", "lint", "test", "e2e"]
+      }
     }
   },
   "projects": {
-    "book-club-app": { "tags": [] },
+    "book-club-app": {
+      "tags": []
+    },
     "book-club-app-e2e": {
       "tags": [],
       "implicitDependencies": ["book-club-app"]
     },
-    "api": { "tags": [] },
-    "api-interfaces": { "tags": [] },
-    "models": { "tags": [] },
-    "util-database": { "tags": [] }
+    "api": {
+      "tags": []
+    },
+    "api-interfaces": {
+      "tags": []
+    },
+    "models": {
+      "tags": []
+    },
+    "util-database": {
+      "tags": []
+    }
   }
 }
