@@ -1,1 +1,7 @@
-<p>club-list works!</p>
+<h2>Resultado da Pesquisa</h2>
+<div fxLayout fxLayoutGap="25px">
+  <book-club-club-card
+    *ngFor="let club of [{}, {}, {}, {}]"
+    (click)="cardClick.emit()"
+  ></book-club-club-card>
+</div>

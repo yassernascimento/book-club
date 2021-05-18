@@ -1,1 +1,30 @@
-<p>club-search works!</p>
+<h1>Procure um Grupo de Leitura</h1>
+<form fxLayout fxLayoutGap="25px">
+  <mat-form-field fxFlex="grow">
+    <mat-label>Nome do clube</mat-label>
+    <input matInput />
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Gênero</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let genrer of []" [value]="0">
+        {{ genrer }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Cidade</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let city of []" [value]="0">
+        {{ city }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Distância</mat-label>
+    <input matInput type="number" />
+  </mat-form-field>
+</form>

@@ -50,9 +50,7 @@
               "apps/book-club-app/src/favicon.ico",
               "apps/book-club-app/src/assets"
             ],
-            "styles": [
-              "apps/book-club-app/src/styles.scss"
-            ],
+            "styles": ["apps/book-club-app/src/styles.scss"],
             "scripts": [],
             "vendorChunk": true,
             "extractLicenses": false,
@@ -124,9 +122,7 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/apps/book-club-app"
-          ],
+          "outputs": ["coverage/apps/book-club-app"],
           "options": {
             "jestConfig": "apps/book-club-app/jest.config.js",
             "passWithNoTests": true
@@ -155,9 +151,7 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "apps/book-club-app-e2e/**/*.{js,ts}"
-            ]
+            "lintFilePatterns": ["apps/book-club-app-e2e/**/*.{js,ts}"]
           }
         }
       }
@@ -170,16 +164,12 @@
       "architect": {
         "build": {
           "builder": "@nrwl/node:build",
-          "outputs": [
-            "{options.outputPath}"
-          ],
+          "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/apps/api",
             "main": "apps/api/src/main.ts",
             "tsConfig": "apps/api/tsconfig.app.json",
-            "assets": [
-              "apps/api/src/assets"
-            ]
+            "assets": ["apps/api/src/assets"]
           },
           "configurations": {
             "production": {
@@ -204,16 +194,12 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "apps/api/**/*.ts"
-            ]
+            "lintFilePatterns": ["apps/api/**/*.ts"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/apps/api"
-          ],
+          "outputs": ["coverage/apps/api"],
           "options": {
             "jestConfig": "apps/api/jest.config.js",
             "passWithNoTests": true
@@ -229,9 +215,7 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "libs/api-interfaces/**/*.ts"
-            ]
+            "lintFilePatterns": ["libs/api-interfaces/**/*.ts"]
           }
         }
       }
@@ -244,9 +228,7 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "libs/models/**/*.ts"
-            ]
+            "lintFilePatterns": ["libs/models/**/*.ts"]
           }
         }
       }
@@ -259,9 +241,7 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "libs/util-database/**/*.ts"
-            ]
+            "lintFilePatterns": ["libs/util-database/**/*.ts"]
           }
         }
       }
