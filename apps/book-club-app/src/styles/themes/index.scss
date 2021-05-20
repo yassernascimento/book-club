@@ -1,5 +1,7 @@
 @use '~@angular/material' as mat;
 
+@use '../../app' as app;
+
 @include mat.core();
 
 @mixin include-material-themes($theme) {
@@ -22,11 +24,22 @@
   @include mat.toolbar-color($theme);
 }
 
+@mixin include-app-themes($theme) {
+  @include app.app-theme($theme);
+}
+
+@mixin include-app-colors($theme) {
+  @include app.app-color($theme);
+}
+
 @import 'palette.scss';
+
 @import 'light.scss';
 @include include-material-themes($light-theme);
+@include include-app-themes($light-theme);
 
 .dark-theme {
   @import 'dark.scss';
   @include include-material-colors($dark-theme);
+  @include include-app-colors($dark-theme);
 }

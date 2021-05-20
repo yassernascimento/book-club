@@ -14,7 +14,9 @@
     }
   ],
   "compilerOptions": {
-    "baseUrl": "src",
-    "paths": { "@core/*": ["app/core/*"] }
+    "baseUrl": ".",
+    "paths": {
+      "@core/*": ["./src/app/core/*"]
+    }
   }
 }
