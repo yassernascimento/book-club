@@ -12,5 +12,9 @@
     {
       "path": "./tsconfig.editor.json"
     }
-  ]
+  ],
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": { "@core/*": ["app/core/*"] }
+  }
 }

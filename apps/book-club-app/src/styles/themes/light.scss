@@ -1,0 +1,11 @@
+$light-primary: mat.define-palette($primary-palette);
+$light-accent: mat.define-palette($accent-palette);
+
+$light-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $light-primary,
+      accent: $light-accent,
+    ),
+  )
+);

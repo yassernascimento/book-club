@@ -1,6 +1,9 @@
 <mat-toolbar>
   <span>Book Club</span>
   <book-club-spacer></book-club-spacer>
+  <button mat-icon-button (click)="toggleTheme.emit()">
+    <mat-icon>{{ getThemeIcon() }}</mat-icon>
+  </button>
   <button mat-icon-button>
     <mat-icon>notifications</mat-icon>
   </button>

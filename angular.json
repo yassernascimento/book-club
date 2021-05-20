@@ -50,7 +50,7 @@
               "apps/book-club-app/src/favicon.ico",
               "apps/book-club-app/src/assets"
             ],
-            "styles": ["apps/book-club-app/src/styles.scss"],
+            "styles": ["apps/book-club-app/src/styles/index.scss"],
             "scripts": [],
             "vendorChunk": true,
             "extractLicenses": false,

@@ -1,2 +1,7 @@
-<book-club-toolbar></book-club-toolbar>
-<router-outlet></router-outlet>
+<div [class.dark-theme]="theme === 'dark'">
+  <book-club-toolbar
+    [theme]="theme"
+    (toggleTheme)="appState.toggleTheme()"
+  ></book-club-toolbar>
+  <router-outlet></router-outlet>
+</div>

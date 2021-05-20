@@ -1,7 +1,3 @@
-@use '~@angular/material' as mat;
-
-@include mat.core();
-
 $primary-palette: (
   50: #e6e7e8,
   100: #c0c4c5,
@@ -67,27 +63,3 @@ $accent-palette: (
     A700: #000000,
   ),
 );
-
-$book-club-app-primary: mat.define-palette($primary-palette);
-$book-club-app-accent: mat.define-palette($accent-palette);
-
-$book-club-app-theme: mat.define-light-theme(
-  (
-    color: (
-      primary: $book-club-app-primary,
-      accent: $book-club-app-accent,
-    ),
-  )
-);
-
-@include mat.all-component-themes($book-club-app-theme);
-
-html,
-body {
-  height: 100%;
-}
-
-body {
-  margin: 0;
-  font-family: Roboto, 'Helvetica Neue', sans-serif;
-}

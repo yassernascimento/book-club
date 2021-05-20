@@ -1,0 +1,11 @@
+$dark-primary: mat.define-palette($primary-palette, 200, 700);
+$dark-accent: mat.define-palette($accent-palette, 200, 200);
+
+$dark-theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: $dark-primary,
+      accent: $dark-accent,
+    ),
+  )
+);

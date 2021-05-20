@@ -1,0 +1,32 @@
+@use '~@angular/material' as mat;
+
+@include mat.core();
+
+@mixin include-material-themes($theme) {
+  @include mat.button-theme($theme);
+  @include mat.card-theme($theme);
+  @include mat.form-field-theme($theme);
+  @include mat.icon-theme($theme);
+  @include mat.input-theme($theme);
+  @include mat.select-theme($theme);
+  @include mat.toolbar-theme($theme);
+}
+
+@mixin include-material-colors($theme) {
+  @include mat.button-color($theme);
+  @include mat.card-color($theme);
+  @include mat.form-field-color($theme);
+  @include mat.icon-color($theme);
+  @include mat.input-color($theme);
+  @include mat.select-color($theme);
+  @include mat.toolbar-color($theme);
+}
+
+@import 'palette.scss';
+@import 'light.scss';
+@include include-material-themes($light-theme);
+
+.dark-theme {
+  @import 'dark.scss';
+  @include include-material-colors($dark-theme);
+}
