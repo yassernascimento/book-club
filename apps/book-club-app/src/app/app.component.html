@@ -1,7 +1,9 @@
-<div [class.dark-theme]="theme === 'dark'">
-  <book-club-toolbar
-    [theme]="theme"
-    (toggleTheme)="appState.toggleTheme()"
-  ></book-club-toolbar>
-  <router-outlet></router-outlet>
-</div>
+<ng-container *ngIf="appState.theme$ | async as theme">
+  <div [class.dark-theme]="theme === 'dark'">
+    <book-club-toolbar
+      [theme]="theme"
+      (toggleTheme)="appState.toggleTheme()"
+    ></book-club-toolbar>
+    <router-outlet></router-outlet>
+  </div>
+</ng-container>
