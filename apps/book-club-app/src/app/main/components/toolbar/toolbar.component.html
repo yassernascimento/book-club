@@ -1,16 +1,12 @@
-<mat-toolbar>
+<mat-toolbar gdColumns="1fr" gdAuto="column" gdGap="10px">
   <span>Book Club</span>
-  <book-club-spacer></book-club-spacer>
   <button mat-icon-button (click)="toggleTheme.emit()">
     <mat-icon>{{ getThemeIcon() }}</mat-icon>
   </button>
   <button mat-icon-button>
-    <mat-icon>notifications</mat-icon>
+    <mat-icon>notifications_none</mat-icon>
   </button>
   <button mat-icon-button>
-    <mat-icon>people</mat-icon>
-  </button>
-  <button mat-icon-button>
-    <mat-icon>menu</mat-icon>
+    <mat-icon>more_vert</mat-icon>
   </button>
 </mat-toolbar>
