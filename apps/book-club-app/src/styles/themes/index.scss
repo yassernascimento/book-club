@@ -26,10 +26,14 @@
 
 @mixin include-app-themes($theme) {
   @include app.app-theme($theme);
+  @include app.club-search-theme($theme);
+  @include app.club-list-theme($theme);
 }
 
 @mixin include-app-colors($theme) {
   @include app.app-color($theme);
+  @include app.club-search-color($theme);
+  @include app.club-list-color($theme);
 }
 
 @import 'palette.scss';

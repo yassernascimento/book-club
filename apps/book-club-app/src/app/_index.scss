@@ -1,1 +1,3 @@
 @forward './_app.component' as app-*;
+@forward './club/components/club-search/club-search-theme.component' as club-search-*;
+@forward './club/components/club-list/club-list-theme.component' as club-list-*;

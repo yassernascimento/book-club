@@ -3,10 +3,10 @@
 
 @mixin color($theme) {
   $config: mat.get-color-config($theme);
-  $background-palette: map.get($config, 'background');
+  $foreground-palette: map.get($config, 'foreground');
 
-  .background {
-    background: mat.get-color-from-palette($background-palette, background);
+  .app-club-search-header {
+    color: mat.get-color-from-palette($foreground-palette, text);
   }
 }
 
