@@ -1,0 +1,17 @@
+@import 'breakpoints';
+
+.container {
+  padding: 0 200px;
+}
+
+@include tablet {
+  .container {
+    padding: 0 100px;
+  }
+}
+
+@include mobile {
+  .container {
+    padding: 0 50px;
+  }
+}

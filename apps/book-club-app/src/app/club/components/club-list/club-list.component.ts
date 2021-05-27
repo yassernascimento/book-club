@@ -7,4 +7,8 @@ import { Component, EventEmitter, Output } from '@angular/core'
 })
 export class ClubListComponent {
   @Output() public cardClick = new EventEmitter<void>()
+
+  public get clubs(): unknown[] {
+    return [{}, {}, {}, {}, {}, {}, {}]
+  }
 }

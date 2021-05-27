@@ -1,0 +1,47 @@
+@use 'sass:map';
+@import '~@angular/flex-layout/_mq.scss';
+
+@mixin desktop {
+  $min: map.get(map.get($breakpoints, md), begin);
+  $max: map.get(map.get($breakpoints, xl), end);
+
+  @media (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}
+
+@mixin not-desktop {
+  $min: map.get(map.get($breakpoints, xs), begin);
+  $max: map.get(map.get($breakpoints, sm), end);
+
+  @media (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  $min: map.get(map.get($breakpoints, sm), begin);
+  $max: map.get(map.get($breakpoints, sm), end);
+
+  @media (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  $min: map.get(map.get($breakpoints, xs), begin);
+  $max: map.get(map.get($breakpoints, xs), end);
+
+  @media (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}
+
+@mixin not-mobile {
+  $min: map.get(map.get($breakpoints, sm), begin);
+  $max: map.get(map.get($breakpoints, xl), end);
+
+  @media (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}

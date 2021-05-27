@@ -1,7 +1,7 @@
 <h2 class="app-club-list-header">Resultado da Pesquisa</h2>
-<div fxLayout fxLayoutGap="25px">
+<div gdColumns="repeat(auto-fit, minmax(180px, 1fr))" gdGap="25px">
   <book-club-club-card
-    *ngFor="let club of [{}, {}, {}, {}]"
+    *ngFor="let club of clubs"
     (click)="cardClick.emit()"
   ></book-club-club-card>
 </div>

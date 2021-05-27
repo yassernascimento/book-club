@@ -51,6 +51,9 @@
               "apps/book-club-app/src/assets"
             ],
             "styles": ["apps/book-club-app/src/styles/index.scss"],
+            "stylePreprocessorOptions": {
+              "includePaths": ["apps/book-club-app/src/styles/utils"]
+            },
             "scripts": [],
             "vendorChunk": true,
             "extractLicenses": false,
