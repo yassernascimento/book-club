@@ -6,7 +6,7 @@ import {
   Output,
 } from '@angular/core'
 
-import { Theme } from '@core/state/app.types'
+import { Theme } from '../../../core/state'
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,

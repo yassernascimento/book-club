@@ -5,6 +5,7 @@ import {
 import { NgModule, Provider } from '@angular/core'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { BrowserModule } from '@angular/platform-browser'
+import { EffectsModule } from '@ngrx/effects'
 import { HttpClientModule } from '@angular/common/http'
 import { RouterModule } from '@angular/router'
 import { StoreModule } from '@ngrx/store'
@@ -28,6 +29,7 @@ const MaterialThemingDefaults: Provider[] = [
   ],
   imports: [
     RouterModule.forRoot([]),
+    EffectsModule.forRoot([]),
     StoreModule.forRoot({ [stateKey]: appReducer }),
     externalModules.imports,
   ],
