@@ -1,4 +1,5 @@
 import { RouterModule, Routes } from '@angular/router'
+import { EffectsModule } from '@ngrx/effects'
 import { FlexLayoutModule } from '@angular/flex-layout'
 import { MatCardModule } from '@angular/material/card'
 import { MatFormFieldModule } from '@angular/material/form-field'
@@ -13,12 +14,9 @@ import {
   ClubListComponent,
   ClubSearchComponent,
 } from './components'
-import { ClubEffects } from './state/club.effects'
+import { ClubEffects, clubReducer, stateKey } from './state'
 import { ClubPageComponent } from './containers'
-import { EffectsModule } from '@ngrx/effects'
 import { SharedModule } from '../shared/shared.module'
-import { clubReducer } from './state/club.reducer'
-import { stateKey } from './state'
 
 const routes: Routes = [{ component: ClubPageComponent, path: 'club' }]
 
