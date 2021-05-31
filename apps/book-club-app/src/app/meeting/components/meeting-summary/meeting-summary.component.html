@@ -1,0 +1,43 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Evento Atual</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <h2>Nome do Evento</h2>
+    <div gdColumns="repeat(2, 1fr)" fxLayoutGap="15px">
+      <img
+        src="https://weart.co/v2/wp-content/uploads/2016/10/WE_ART_JONI_MAJER_6-1.jpg"
+      />
+      <div fxLayout="column" fxLayoutGap="10px">
+        <div fxLayout="column">
+          <span class="mat-body-strong">Genero:</span>
+          <span class="mat-small">Terror</span>
+        </div>
+        <div fxLayout="column">
+          <span class="mat-body-strong">Data e hora:</span>
+          <span class="mat-small">19/02/2021 às 09h</span>
+        </div>
+        <div fxLayout="column">
+          <span class="mat-body-strong">Local/Link</span>
+          <span class="mat-small">Biblioteca Pública</span>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div fxLayout fxLayoutAlign="space-between">
+        <h4>Progresso do Clube</h4>
+        <span class="mat-small">55/100 Páginas</span>
+      </div>
+      <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+    </div>
+
+    <div>
+      <div fxLayout fxLayoutAlign="space-between">
+        <h4>Seu Progresso</h4>
+        <span class="mat-small">55/100 Páginas</span>
+      </div>
+      <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+    </div>
+  </mat-card-content>
+</mat-card>

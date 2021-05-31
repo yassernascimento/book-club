@@ -1,0 +1,5 @@
+export * from './meeting-card/meeting-card.component'
+export * from './meeting-comments/meeting-comments.component'
+export * from './meeting-history/meeting-history.component'
+export * from './meeting-summary/meeting-summary.component'
+export * from './meeting-voting/meeting-voting.component'

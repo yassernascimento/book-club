@@ -1,0 +1,16 @@
+<div class="container" fxLayout="column" fxLayoutGap="30px">
+  <div fxLayout="column" fxLayoutGap="15px" class="message-list">
+    <book-club-chat-message
+      *ngFor="let message of MESSAGES"
+    ></book-club-chat-message>
+  </div>
+
+  <div fxLayout fxLayoutAlign="start center" fxLayoutGap="10px">
+    <mat-form-field fxFlex="grow">
+      <input matInput />
+    </mat-form-field>
+    <button mat-raised-button color="accent">
+      <mat-icon>send</mat-icon>
+    </button>
+  </div>
+</div>

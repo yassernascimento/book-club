@@ -10,7 +10,9 @@
   @include mat.form-field-theme($theme);
   @include mat.icon-theme($theme);
   @include mat.input-theme($theme);
+  @include mat.progress-bar-theme($theme);
   @include mat.select-theme($theme);
+  @include mat.tabs-theme($theme);
   @include mat.toolbar-theme($theme);
 }
 
@@ -20,7 +22,9 @@
   @include mat.form-field-color($theme);
   @include mat.icon-color($theme);
   @include mat.input-color($theme);
+  @include mat.progress-bar-color($theme);
   @include mat.select-color($theme);
+  @include mat.tabs-color($theme);
   @include mat.toolbar-color($theme);
 }
 
@@ -28,12 +32,14 @@
   @include app.app-theme($theme);
   @include app.club-search-theme($theme);
   @include app.club-list-theme($theme);
+  @include app.chat-message-theme($theme);
 }
 
 @mixin include-app-colors($theme) {
   @include app.app-color($theme);
   @include app.club-search-color($theme);
   @include app.club-list-color($theme);
+  @include app.chat-message-color($theme);
 }
 
 @import 'palette.scss';

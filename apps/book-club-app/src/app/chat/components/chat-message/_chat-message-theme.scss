@@ -1,0 +1,34 @@
+@use 'sass:map';
+@use '~@angular/material' as mat;
+
+@mixin color($theme) {
+  $config: mat.get-color-config($theme);
+  $foreground-palette: map.get($config, 'foreground');
+  $background-palette: map.get($config, 'background');
+
+  $foreground-text: mat.get-color-from-palette($foreground-palette, text);
+
+  .author {
+    color: $foreground-text;
+  }
+
+  .hour {
+    color: $foreground-text;
+  }
+
+  .message {
+    color: $foreground-text;
+    background-color: mat.get-color-from-palette(
+      $background-palette,
+      disabled-button
+    );
+  }
+}
+
+@mixin typography($theme) {
+}
+
+@mixin theme($theme) {
+  @include color($theme);
+  @include typography($theme);
+}

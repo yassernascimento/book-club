@@ -1,1 +1,18 @@
-<p>club-page works!</p>
+<div class="container" gdColumns="1fr 3fr" [gdGap]="gap">
+  <div fxLayout="column" [fxLayoutGap]="gap">
+    <book-club-club-header></book-club-club-header>
+    <book-club-meeting-summary></book-club-meeting-summary>
+  </div>
+  <mat-tab-group mat-align-tabs="center">
+    <mat-tab label="Discussão">
+      <div gdColumns="2fr 1fr" [gdGap]="gap">
+        <book-club-chat-page></book-club-chat-page>
+        <book-club-member-list></book-club-member-list>
+      </div>
+    </mat-tab>
+    <mat-tab label="Eventos">
+      <book-club-meeting-page></book-club-meeting-page>
+    </mat-tab>
+    <mat-tab label="Livros">Content 3</mat-tab>
+  </mat-tab-group>
+</div>

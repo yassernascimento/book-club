@@ -1,0 +1,20 @@
+<div class="container" fxLayout="column" fxLayoutGap="20px">
+  <div fxLayout fxLayoutGap="15px">
+    <h3>Membros</h3>
+    <h3>83</h3>
+  </div>
+
+  <mat-form-field>
+    <mat-label>Pesquisar</mat-label>
+    <input matInput />
+    <mat-icon matSuffix>search</mat-icon>
+  </mat-form-field>
+
+  <div fxLayout="column" fxLayoutGap="10px">
+    <book-club-member-card
+      *ngFor="let member of MEMBERS"
+    ></book-club-member-card>
+  </div>
+
+  <button mat-raised-button color="accent">Convidar</button>
+</div>

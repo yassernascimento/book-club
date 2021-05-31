@@ -1,0 +1,24 @@
+import { FlexLayoutModule } from '@angular/flex-layout'
+import { MatButtonModule } from '@angular/material/button'
+import { MatFormFieldModule } from '@angular/material/form-field'
+import { MatIconModule } from '@angular/material/icon'
+import { MatInputModule } from '@angular/material/input'
+import { NgModule } from '@angular/core'
+
+import { ChatMessageComponent } from './components'
+import { ChatPageComponent } from './containers'
+import { SharedModule } from '../shared/shared.module'
+
+const MaterialModules = [
+  MatButtonModule,
+  MatFormFieldModule,
+  MatIconModule,
+  MatInputModule,
+]
+
+@NgModule({
+  declarations: [ChatMessageComponent, ChatPageComponent],
+  exports: [ChatPageComponent],
+  imports: [MaterialModules, FlexLayoutModule, SharedModule],
+})
+export class ChatModule {}

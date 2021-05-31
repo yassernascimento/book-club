@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core'
 
 @Component({
   selector: 'book-club-club-page',
+  styleUrls: ['./club-page.component.scss'],
   templateUrl: './club-page.component.html',
-  styleUrls: ['./club-page.component.scss']
 })
-export class ClubPageComponent {}
+export class ClubPageComponent {
+  public gap = '30px'
+}

@@ -1,3 +1,4 @@
-@forward './_app.component' as app-*;
-@forward './club/components/club-search/club-search-theme.component' as club-search-*;
-@forward './club/components/club-list/club-list-theme.component' as club-list-*;
+@forward './_app-theme.component' as app-*;
+@forward './chat/components/chat-message/_chat-message-theme' as chat-message-*;
+@forward './club/components/club-list/_club-list-theme.component' as club-list-*;
+@forward './club/components/club-search/_club-search-theme.component' as club-search-*;
