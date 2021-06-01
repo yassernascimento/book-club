@@ -1,6 +1,6 @@
 <ng-container *ngIf="appState.theme$ | async as theme">
   <div [class.dark-theme]="theme === 'dark'">
-    <div class="background">
+    <div class="app-background">
       <book-club-toolbar
         [theme]="theme"
         (toggleTheme)="appState.toggleTheme()"

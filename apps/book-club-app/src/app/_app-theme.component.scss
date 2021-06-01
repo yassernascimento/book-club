@@ -5,7 +5,7 @@
   $config: mat.get-color-config($theme);
   $background-palette: map.get($config, 'background');
 
-  .background {
+  .app-background {
     background: mat.get-color-from-palette($background-palette, background);
   }
 }

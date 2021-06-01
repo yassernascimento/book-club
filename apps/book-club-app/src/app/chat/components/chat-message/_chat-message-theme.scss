@@ -8,15 +8,15 @@
 
   $foreground-text: mat.get-color-from-palette($foreground-palette, text);
 
-  .author {
+  .app-chat-message-author {
     color: $foreground-text;
   }
 
-  .hour {
+  .app-chat-message-hour {
     color: $foreground-text;
   }
 
-  .message {
+  .app-chat-message-message {
     color: $foreground-text;
     background-color: mat.get-color-from-palette(
       $background-palette,
