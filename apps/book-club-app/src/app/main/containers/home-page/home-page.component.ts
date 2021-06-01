@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core'
-import { Router } from '@angular/router'
+import { MatDialog } from '@angular/material/dialog'
 
 import { ClubStateFacade } from '../../../club/state'
+import { ClubSummaryComponent } from '../../../club/components'
 
 @Component({
   providers: [ClubStateFacade],
@@ -11,7 +12,7 @@ import { ClubStateFacade } from '../../../club/state'
 })
 export class HomePageComponent implements OnInit {
   public constructor(
-    private router: Router,
+    private dialog: MatDialog,
     public clubState: ClubStateFacade
   ) {}
 
@@ -20,6 +21,6 @@ export class HomePageComponent implements OnInit {
   }
 
   public onClubSelect(): void {
-    this.router.navigateByUrl('/club')
+    this.dialog.open(ClubSummaryComponent, { width: '65%' })
   }
 }

@@ -1,10 +1,12 @@
-import { CommonModule } from '@angular/common'
+import { FlexLayoutModule } from '@angular/flex-layout'
 import { NgModule } from '@angular/core'
 
 import { BookCardComponent, BookListComponent } from './components'
+import { SharedModule } from '../shared/shared.module'
 
 @NgModule({
   declarations: [BookCardComponent, BookListComponent],
-  imports: [CommonModule],
+  exports: [BookListComponent],
+  imports: [FlexLayoutModule, SharedModule],
 })
 export class BookModule {}
