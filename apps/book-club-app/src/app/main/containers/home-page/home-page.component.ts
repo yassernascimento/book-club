@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core'
 import { MatDialog } from '@angular/material/dialog'
 
 import { ClubStateFacade } from '../../../club/state'
-import { ClubSummaryComponent } from '../../../club/components'
+import { ClubSummaryComponent } from '../../../club/containers'
 
 @Component({
   providers: [ClubStateFacade],

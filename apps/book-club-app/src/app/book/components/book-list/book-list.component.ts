@@ -1,4 +1,9 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core'
+import {
+  ChangeDetectionStrategy,
+  Component,
+  EventEmitter,
+  Output,
+} from '@angular/core'
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -7,5 +12,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core'
   templateUrl: './book-list.component.html',
 })
 export class BookListComponent {
+  @Output() public cardClick = new EventEmitter<void>()
+
   public BOOKS = new Array(5).fill({})
 }

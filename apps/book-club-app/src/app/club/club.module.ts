@@ -16,12 +16,11 @@ import {
   ClubHeaderComponent,
   ClubListComponent,
   ClubSearchComponent,
-  ClubSummaryComponent,
 } from './components'
 import { ClubEffects, clubReducer, stateKey } from './state'
+import { ClubPageComponent, ClubSummaryComponent } from './containers'
 import { BookModule } from '../book/book.module'
 import { ChatModule } from '../chat/chat.module'
-import { ClubPageComponent } from './containers'
 import { MeetingModule } from '../meeting/meeting.module'
 import { MemberModule } from '../member/member.module'
 import { SharedModule } from '../shared/shared.module'
