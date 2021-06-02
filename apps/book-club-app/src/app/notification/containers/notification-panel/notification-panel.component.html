@@ -1,0 +1,11 @@
+<div class="container" fxLayout="column" fxLayoutGap="20px">
+  <h2>Notificações</h2>
+  <button mat-raised-button color="accent" fxFlexAlign="end">
+    Marcar Todas Como Lida
+  </button>
+  <div fxLayout="column" fxLayoutGap="10px">
+    <book-club-notification-item
+      *ngFor="let notification of NOTIFICATIONS"
+    ></book-club-notification-item>
+  </div>
+</div>

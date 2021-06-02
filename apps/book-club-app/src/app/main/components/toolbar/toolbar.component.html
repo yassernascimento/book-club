@@ -3,10 +3,17 @@
   <button mat-icon-button (click)="toggleTheme.emit()">
     <mat-icon>{{ getThemeIcon() }}</mat-icon>
   </button>
-  <button mat-icon-button>
+
+  <button mat-icon-button [matMenuTriggerFor]="notificationPanel">
     <mat-icon>notifications_none</mat-icon>
   </button>
-  <button mat-icon-button>
+  <mat-menu #notificationPanel="matMenu">
+    <ng-template matMenuContent>
+      <book-club-notification-panel></book-club-notification-panel>
+    </ng-template>
+  </mat-menu>
+
+  <button mat-icon-button [matMenuTriggerFor]="menu">
     <mat-icon>more_vert</mat-icon>
   </button>
 </mat-toolbar>
