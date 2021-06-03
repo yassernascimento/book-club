@@ -1,5 +1,4 @@
 import { RouterModule, Routes } from '@angular/router'
-import { FlexLayoutModule } from '@angular/flex-layout'
 import { MatButtonModule } from '@angular/material/button'
 import { MatDialogModule } from '@angular/material/dialog'
 import { MatIconModule } from '@angular/material/icon'
@@ -12,10 +11,11 @@ import { ClubModule } from '../club/club.module'
 import { HomePageComponent } from './containers'
 import { NotificationModule } from '../notification/notification.module'
 import { SharedModule } from '../shared/shared.module'
+import { UserModule } from '../user/user.module'
 
 const routes: Routes = [{ component: HomePageComponent, path: '' }]
 
-const AppModules = [ClubModule, NotificationModule, SharedModule]
+const AppModules = [ClubModule, NotificationModule, SharedModule, UserModule]
 const MaterialModules = [
   MatButtonModule,
   MatDialogModule,
@@ -27,11 +27,6 @@ const MaterialModules = [
 @NgModule({
   declarations: [HomePageComponent, ToolbarComponent, HomeFooterComponent],
   exports: [ToolbarComponent],
-  imports: [
-    AppModules,
-    FlexLayoutModule,
-    MaterialModules,
-    RouterModule.forChild(routes),
-  ],
+  imports: [AppModules, MaterialModules, RouterModule.forChild(routes)],
 })
 export class MainModule {}

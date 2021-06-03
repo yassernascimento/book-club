@@ -1,0 +1,41 @@
+<div class="container" fxLayout="column" fxLayoutGap="20px">
+  <h2>Editar Perfil</h2>
+
+  <mat-divider></mat-divider>
+
+  <div fxLayout="column" fxLayoutGap="15px" fxLayoutAlign="start center">
+    <img
+      src="https://i.pinimg.com/474x/3b/50/e3/3b50e3e830ac8bae66f60bd9a175f01c.jpg"
+      alt=""
+    />
+
+    <button mat-raised-button color="accent">Alterar Foto</button>
+  </div>
+
+  <mat-divider></mat-divider>
+
+  <div fxLayout="column" fxLayoutGap="5px">
+    <mat-form-field>
+      <mat-label>Nome</mat-label>
+      <input matInput />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Gêneros Favoritos</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let genrer of []" [value]="0">
+          {{ genrer }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Biografia</mat-label>
+      <input matInput />
+    </mat-form-field>
+  </div>
+
+  <mat-divider></mat-divider>
+
+  <button mat-raised-button color="accent">Salvar</button>
+</div>

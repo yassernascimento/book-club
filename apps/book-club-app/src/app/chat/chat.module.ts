@@ -1,4 +1,3 @@
-import { FlexLayoutModule } from '@angular/flex-layout'
 import { MatButtonModule } from '@angular/material/button'
 import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatIconModule } from '@angular/material/icon'
@@ -9,6 +8,7 @@ import { ChatMessageComponent } from './components'
 import { ChatPageComponent } from './containers'
 import { SharedModule } from '../shared/shared.module'
 
+const AppModules = [SharedModule]
 const MaterialModules = [
   MatButtonModule,
   MatFormFieldModule,
@@ -19,6 +19,6 @@ const MaterialModules = [
 @NgModule({
   declarations: [ChatMessageComponent, ChatPageComponent],
   exports: [ChatPageComponent],
-  imports: [MaterialModules, FlexLayoutModule, SharedModule],
+  imports: [AppModules, MaterialModules],
 })
 export class ChatModule {}

@@ -1,4 +1,3 @@
-import { FlexLayoutModule } from '@angular/flex-layout'
 import { MatButtonModule } from '@angular/material/button'
 import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatIconModule } from '@angular/material/icon'
@@ -8,6 +7,7 @@ import { NgModule } from '@angular/core'
 import { MemberCardComponent, MemberListComponent } from './components'
 import { SharedModule } from '../shared/shared.module'
 
+const AppModules = [SharedModule]
 const MaterialModules = [
   MatButtonModule,
   MatFormFieldModule,
@@ -18,6 +18,6 @@ const MaterialModules = [
 @NgModule({
   declarations: [MemberCardComponent, MemberListComponent],
   exports: [MemberListComponent],
-  imports: [FlexLayoutModule, MaterialModules, SharedModule],
+  imports: [AppModules, MaterialModules],
 })
 export class MemberModule {}

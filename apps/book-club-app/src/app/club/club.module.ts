@@ -1,6 +1,5 @@
 import { RouterModule, Routes } from '@angular/router'
 import { EffectsModule } from '@ngrx/effects'
-import { FlexLayoutModule } from '@angular/flex-layout'
 import { MatCardModule } from '@angular/material/card'
 import { MatDialogModule } from '@angular/material/dialog'
 import { MatFormFieldModule } from '@angular/material/form-field'
@@ -27,7 +26,13 @@ import { SharedModule } from '../shared/shared.module'
 
 const routes: Routes = [{ component: ClubPageComponent, path: 'club' }]
 
-const AppModules = [BookModule, ChatModule, MeetingModule, MemberModule]
+const AppModules = [
+  BookModule,
+  ChatModule,
+  MeetingModule,
+  MemberModule,
+  SharedModule,
+]
 const MaterialModules = [
   MatCardModule,
   MatDialogModule,
@@ -51,10 +56,8 @@ const MaterialModules = [
   imports: [
     AppModules,
     EffectsModule.forFeature([ClubEffects]),
-    FlexLayoutModule,
     MaterialModules,
     RouterModule.forChild(routes),
-    SharedModule,
     StoreModule.forFeature(stateKey, clubReducer),
   ],
 })
