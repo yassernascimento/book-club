@@ -1,5 +1,9 @@
 import { ChangeDetectionStrategy, Component, Inject } from '@angular/core'
-import { MAT_DIALOG_DATA, MatDialog } from '@angular/material/dialog'
+import {
+  MAT_DIALOG_DATA,
+  MatDialog,
+  MatDialogRef,
+} from '@angular/material/dialog'
 
 import { BookDetailsComponent } from '../../../book/components'
 
@@ -11,6 +15,7 @@ import { BookDetailsComponent } from '../../../book/components'
 })
 export class ClubSummaryComponent {
   public constructor(
+    public dialogRef: MatDialogRef<ClubSummaryComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     public dialog: MatDialog
   ) {}

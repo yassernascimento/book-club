@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core'
 import { clubsFound, searchClubs } from './club.actions'
 import { IClub } from '@book-club/models'
 
-const SAMPLE_DATA = new Array(10).fill({})
+const SAMPLE_DATA = new Array(4).fill({})
 
 @Injectable()
 export class ClubEffects {

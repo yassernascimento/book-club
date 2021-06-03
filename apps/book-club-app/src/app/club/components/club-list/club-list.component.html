@@ -1,4 +1,9 @@
 <h2 class="mat-subheading-2 app-club-list-header">{{ title }}</h2>
+<mat-progress-bar
+  *ngIf="loading"
+  color="accent"
+  mode="indeterminate"
+></mat-progress-bar>
 <div gdColumns="repeat(auto-fit, minmax(180px, 1fr))" gdGap="25px">
   <book-club-club-card
     *ngFor="let club of clubs"

@@ -3,6 +3,7 @@
   <book-club-club-list
     title="Resultado da Pesquisa"
     [clubs]="clubState.clubsFound$ | async"
+    [loading]="clubState.clubSearchLoading$ | async"
     (cardClick)="onClubSelect()"
   ></book-club-club-list>
 

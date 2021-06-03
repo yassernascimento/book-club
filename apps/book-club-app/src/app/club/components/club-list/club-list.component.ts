@@ -17,5 +17,6 @@ import { IClub } from '@book-club/models'
 export class ClubListComponent {
   @Input() public title: string
   @Input() public clubs: IClub[] = []
+  @Input() public loading = false
   @Output() public cardClick = new EventEmitter<void>()
 }
