@@ -14,5 +14,5 @@ import {
 export class BookListComponent {
   @Output() public cardClick = new EventEmitter<void>()
 
-  public BOOKS = new Array(5).fill({})
+  public BOOKS = new Array(4).fill({})
 }

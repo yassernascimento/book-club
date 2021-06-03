@@ -11,6 +11,8 @@ import { ClubSummaryComponent } from '../../../club/containers'
   templateUrl: './home-page.component.html',
 })
 export class HomePageComponent implements OnInit {
+  public MY_CLUBS = new Array(4).fill({})
+
   public constructor(
     private dialog: MatDialog,
     public clubState: ClubStateFacade

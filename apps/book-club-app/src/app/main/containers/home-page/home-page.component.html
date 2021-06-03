@@ -1,8 +1,15 @@
 <div class="container">
   <book-club-club-search></book-club-club-search>
   <book-club-club-list
+    title="Resultado da Pesquisa"
     [clubs]="clubState.clubsFound$ | async"
     (cardClick)="onClubSelect()"
+  ></book-club-club-list>
+
+  <book-club-club-list
+    title="Seus Clubes de Leitura"
+    [clubs]="MY_CLUBS"
+    routerLink="club"
   ></book-club-club-list>
   <book-club-home-footer></book-club-home-footer>
 </div>
