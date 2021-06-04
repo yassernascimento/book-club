@@ -1,0 +1,20 @@
+<div
+  class="container"
+  fxLayout
+  fxLayoutGap="10px"
+  fxLayoutAlign="center center"
+>
+  <button
+    mat-icon-button
+    [disabled]="disablePrevButton"
+    (click)="previousPage()"
+  >
+    <mat-icon>navigate_before</mat-icon>
+  </button>
+  <div fxLayout fxLayoutAlign="space-between" fxFlex="grow">
+    <ng-content></ng-content>
+  </div>
+  <button mat-icon-button [disabled]="disableNextButton" (click)="nextPage()">
+    <mat-icon>navigate_next</mat-icon>
+  </button>
+</div>
