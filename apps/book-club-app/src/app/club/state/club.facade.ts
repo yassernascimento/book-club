@@ -2,13 +2,14 @@ import { Injectable } from '@angular/core'
 import { Store } from '@ngrx/store'
 
 import { clubsFound, searchClubs } from './club.actions'
+import { State } from '.'
 import { StateService } from '../../utils/state.service'
 import { selectClubsFound } from './club.selectors'
 
 @Injectable()
 export class ClubStateFacade {
   public constructor(
-    private store: Store,
+    private store: Store<State>,
     private stateService: StateService
   ) {}
 

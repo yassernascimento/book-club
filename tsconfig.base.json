@@ -13,6 +13,9 @@
     "lib": ["es2017", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
     "baseUrl": ".",
     "paths": {
       "@book-club/api-interfaces": ["libs/api-interfaces/src/index.ts"],
@@ -20,5 +23,6 @@
       "@book-club/util-database": ["libs/util-database/src/index.ts"]
     }
   },
+
   "exclude": ["node_modules", "tmp"]
 }

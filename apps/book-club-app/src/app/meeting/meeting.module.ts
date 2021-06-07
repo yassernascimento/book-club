@@ -9,7 +9,7 @@ import {
   MeetingSummaryComponent,
   MeetingVotingComponent,
 } from './components'
-import { MeetingFormComponent, MeetingPageComponent } from './containers'
+import { MeetingPageComponent } from './containers'
 import { SharedModule } from '../shared/shared.module'
 
 const AppModules = [SharedModule]
@@ -19,7 +19,6 @@ const MaterialModules = [MatCardModule, MatProgressBarModule]
   declarations: [
     MeetingCardComponent,
     MeetingCommentsComponent,
-    MeetingFormComponent,
     MeetingHistoryComponent,
     MeetingPageComponent,
     MeetingSummaryComponent,

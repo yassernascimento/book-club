@@ -21,7 +21,7 @@ import { CarouselItemDirective } from './carousel-item.directive'
 })
 export class CarouselComponent implements AfterContentInit, OnDestroy {
   @ContentChildren(CarouselItemDirective)
-  private items: QueryList<CarouselItemDirective>
+  private items!: QueryList<CarouselItemDirective>
 
   public play = 0
 

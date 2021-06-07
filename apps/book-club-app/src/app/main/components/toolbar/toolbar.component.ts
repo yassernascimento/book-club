@@ -17,7 +17,7 @@ import { UserDetailsComponent } from '../../../user/containers'
   templateUrl: './toolbar.component.html',
 })
 export class ToolbarComponent {
-  @Input() public theme: Theme
+  @Input() public theme!: Theme
   @Output() public toggleTheme = new EventEmitter<void>()
 
   public constructor(public dialog: MatDialog) {}
