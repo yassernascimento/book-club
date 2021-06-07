@@ -6,15 +6,20 @@
 >
   <button
     mat-icon-button
-    [disabled]="disablePrevButton"
+    [disabled]="prevButtonDisabled"
     (click)="previousPage()"
   >
     <mat-icon>navigate_before</mat-icon>
   </button>
-  <div fxLayout fxLayoutAlign="space-between" fxFlex="grow">
+  <div
+    fxLayout
+    fxLayoutAlign="space-between"
+    fxFlex="grow"
+    [@carouselAnimation]="play"
+  >
     <ng-content></ng-content>
   </div>
-  <button mat-icon-button [disabled]="disableNextButton" (click)="nextPage()">
+  <button mat-icon-button [disabled]="nextButtonDisabled" (click)="nextPage()">
     <mat-icon>navigate_next</mat-icon>
   </button>
 </div>

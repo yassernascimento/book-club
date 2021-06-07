@@ -4,13 +4,11 @@
   color="accent"
   mode="indeterminate"
 ></mat-progress-bar>
-<div gdColumns="repeat(auto-fit, minmax(180px, 1fr))" gdGap="25px">
-  <book-club-carousel>
-    <ng-container *ngFor="let club of clubs">
-      <book-club-club-card
-        *carouselItem
-        (click)="cardClick.emit()"
-      ></book-club-club-card>
-    </ng-container>
-  </book-club-carousel>
-</div>
+<book-club-carousel>
+  <ng-container *ngFor="let club of clubs">
+    <book-club-club-card
+      *carouselItem
+      (click)="cardClick.emit()"
+    ></book-club-club-card>
+  </ng-container>
+</book-club-carousel>

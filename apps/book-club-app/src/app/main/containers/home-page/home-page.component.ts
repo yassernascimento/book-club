@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core'
 import { MatDialog } from '@angular/material/dialog'
+import { Router } from '@angular/router'
 
 import { ClubStateFacade } from '../../../club/state'
 import { ClubSummaryComponent } from '../../../club/containers'
@@ -11,10 +12,11 @@ import { ClubSummaryComponent } from '../../../club/containers'
   templateUrl: './home-page.component.html',
 })
 export class HomePageComponent implements OnInit {
-  public MY_CLUBS = new Array(4).fill({})
+  public MY_CLUBS = new Array(8).fill({})
 
   public constructor(
     private dialog: MatDialog,
+    private router: Router,
     public clubState: ClubStateFacade
   ) {}
 
@@ -24,5 +26,9 @@ export class HomePageComponent implements OnInit {
 
   public onClubSelect(): void {
     this.dialog.open(ClubSummaryComponent, { width: '65%' })
+  }
+
+  public goToClub(): void {
+    this.router.navigate(['/club'])
   }
 }

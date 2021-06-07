@@ -10,7 +10,7 @@
   <book-club-club-list
     title="Seus Clubes de Leitura"
     [clubs]="MY_CLUBS"
-    routerLink="club"
+    (cardClick)="goToClub()"
   ></book-club-club-list>
   <book-club-home-footer></book-club-home-footer>
 </div>

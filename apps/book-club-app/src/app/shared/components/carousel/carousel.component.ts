@@ -1,6 +1,7 @@
 import {
   AfterContentInit,
-  // ChangeDetectionStrategy,
+  ChangeDetectionStrategy,
+  ChangeDetectorRef,
   Component,
   ContentChildren,
   OnDestroy,
@@ -8,10 +9,12 @@ import {
 } from '@angular/core'
 import { Subscription } from 'rxjs'
 
+import { CarouselAnimation } from './carousel.animations'
 import { CarouselItemDirective } from './carousel-item.directive'
 
 @Component({
-  // changeDetection: ChangeDetectionStrategy.OnPush,
+  animations: [CarouselAnimation.animation],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'book-club-carousel',
   styleUrls: ['./carousel.component.scss'],
   templateUrl: './carousel.component.html',
@@ -20,11 +23,15 @@ export class CarouselComponent implements AfterContentInit, OnDestroy {
   @ContentChildren(CarouselItemDirective)
   private items: QueryList<CarouselItemDirective>
 
+  public play = 0
+
   private subscriptions: Subscription[] = []
   public page = 1
   public readonly slotsNumber = 4
-  public disablePrevButton = true
-  public disableNextButton = true
+  public prevButtonDisabled = true
+  public nextButtonDisabled = true
+
+  public constructor(private ref: ChangeDetectorRef) {}
 
   public ngAfterContentInit(): void {
     this.updateList()
@@ -53,8 +60,20 @@ export class CarouselComponent implements AfterContentInit, OnDestroy {
       isOnPage ? item.show() : item.hide()
     })
 
-    this.disablePrevButton = this.page === 1
-    this.disableNextButton = this.items.length <= this.page * this.slotsNumber
+    this.updateButtonsState()
+    if (this.items.length > 0) {
+      this.animate()
+    }
+  }
+
+  private animate(): void {
+    this.play = CarouselAnimation.play()
+  }
+
+  private updateButtonsState(): void {
+    this.prevButtonDisabled = this.page === 1
+    this.nextButtonDisabled = this.items.length <= this.page * this.slotsNumber
+    this.ref.markForCheck()
   }
 
   public ngOnDestroy(): void {
