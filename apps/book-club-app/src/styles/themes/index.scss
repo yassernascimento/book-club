@@ -4,6 +4,7 @@
 @include mat.core();
 
 @mixin include-material-themes($theme) {
+  @include mat.badge-theme($theme);
   @include mat.button-theme($theme);
   @include mat.card-theme($theme);
   @include mat.core-theme($theme);
@@ -20,6 +21,7 @@
 }
 
 @mixin include-material-colors($theme) {
+  @include mat.badge-color($theme);
   @include mat.button-color($theme);
   @include mat.card-color($theme);
   @include mat.core-color($theme);
