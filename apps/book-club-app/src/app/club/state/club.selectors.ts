@@ -8,3 +8,8 @@ export const selectClubsFound = createSelector(
   getClubState,
   (state) => state.clubsFound
 )
+
+export const selectMyClubs = createSelector(
+  getClubState,
+  (state) => state.myClubs
+)

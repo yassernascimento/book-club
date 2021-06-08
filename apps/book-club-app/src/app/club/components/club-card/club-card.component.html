@@ -1,12 +1,8 @@
 <mat-card>
   <mat-card-header>
-    <mat-card-title>Grupo Legendários</mat-card-title>
+    <mat-card-title>{{ club.name }}</mat-card-title>
   </mat-card-header>
-  <img
-    mat-card-image
-    src="https://material.angular.io/assets/img/examples/shiba1.jpg"
-    alt="Photo of a Shiba Inu"
-  />
+  <img mat-card-image [src]="club.cover" alt="Club Cover" />
   <mat-card-footer>
     <mat-card-subtitle fxLayout fxLayoutAlign="space-evenly">
       <span fxLayout fxLayoutGap="5px" fxLayoutAlign="center center">

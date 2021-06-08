@@ -1,18 +1,19 @@
-import { Component, OnInit } from '@angular/core'
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core'
 import { MatDialog } from '@angular/material/dialog'
 import { Router } from '@angular/router'
 
-import { ClubStateFacade } from '../../../club/state'
+import { ClubSearchPayload, ClubStateFacade } from '../../../club/state'
 import { ClubSummaryComponent } from '../../../club/containers'
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   providers: [ClubStateFacade],
   selector: 'book-club-home-page',
   styleUrls: ['./home-page.component.scss'],
   templateUrl: './home-page.component.html',
 })
 export class HomePageComponent implements OnInit {
-  public MY_CLUBS = new Array(8).fill({})
+  public MY_CLUBS = []
 
   public constructor(
     private dialog: MatDialog,
@@ -21,7 +22,11 @@ export class HomePageComponent implements OnInit {
   ) {}
 
   public ngOnInit(): void {
-    this.clubState.searchClubs()
+    this.clubState.searchMyClubs()
+  }
+
+  public onClubSearchUpdate(payload: ClubSearchPayload): void {
+    this.clubState.searchClubs(payload)
   }
 
   public onClubSelect(): void {

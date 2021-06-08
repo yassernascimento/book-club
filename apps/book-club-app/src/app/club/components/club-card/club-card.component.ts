@@ -1,4 +1,6 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core'
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core'
+
+import { IClub } from '@book-club/models'
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -6,4 +8,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core'
   styleUrls: ['./club-card.component.scss'],
   templateUrl: './club-card.component.html',
 })
-export class ClubCardComponent {}
+export class ClubCardComponent {
+  @Input() public club!: IClub
+}

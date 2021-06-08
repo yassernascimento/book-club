@@ -11,6 +11,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar'
 import { MatSelectModule } from '@angular/material/select'
 import { MatTabsModule } from '@angular/material/tabs'
 import { NgModule } from '@angular/core'
+import { ReactiveFormsModule } from '@angular/forms'
 import { StoreModule } from '@ngrx/store'
 
 import {
@@ -70,6 +71,7 @@ const MaterialModules = [
     AppModules,
     EffectsModule.forFeature([ClubEffects]),
     MaterialModules,
+    ReactiveFormsModule,
     RouterModule.forChild(routes),
     StoreModule.forFeature(stateKey, clubReducer),
   ],

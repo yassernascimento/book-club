@@ -51,19 +51,25 @@ export class CarouselComponent implements AfterContentInit, OnDestroy {
   }
 
   private updateList(): void {
+    if (this.items.length === 0) {
+      return
+    }
+
     const offset = 1
     const pageEnd = this.page * this.slotsNumber - offset
     const pageInit = pageEnd + offset - this.slotsNumber
+    const isOnPage = (index: number): boolean =>
+      index >= pageInit && index <= pageEnd
 
-    this.items.forEach((item, index) => {
-      const isOnPage = index >= pageInit && index <= pageEnd
-      isOnPage ? item.show() : item.hide()
-    })
+    this.items.forEach((item, index) => item.hide())
+    this.items
+      .filter((item, index) => isOnPage(index))
+      .map((item) => item.show())
 
     this.updateButtonsState()
-    if (this.items.length > 0) {
-      this.animate()
-    }
+    this.animate()
+
+    this.ref.markForCheck()
   }
 
   private animate(): void {
@@ -73,7 +79,6 @@ export class CarouselComponent implements AfterContentInit, OnDestroy {
   private updateButtonsState(): void {
     this.prevButtonDisabled = this.page === 1
     this.nextButtonDisabled = this.items.length <= this.page * this.slotsNumber
-    this.ref.markForCheck()
   }
 
   public ngOnDestroy(): void {

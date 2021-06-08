@@ -3,11 +3,19 @@
   color="accent"
   mode="indeterminate"
 ></mat-progress-bar>
-<book-club-carousel>
-  <ng-container *ngFor="let club of clubs">
-    <book-club-club-card
-      *carouselItem
-      (click)="cardClick.emit()"
-    ></book-club-club-card>
-  </ng-container>
-</book-club-carousel>
+
+<ng-container *ngIf="hasClubs">
+  <div fxLayout fxLayoutGap="2px" fxLayoutAlign="start center">
+    <h2 class="mat-subheading-1">{{ title }}</h2>
+    <!-- <h2 class="mat-subheading-2"></h2> -->
+  </div>
+  <book-club-carousel>
+    <ng-container *ngFor="let club of clubs; trackBy: trackClub">
+      <book-club-club-card
+        *carouselItem
+        [club]="club"
+        (click)="cardClick.emit()"
+      ></book-club-club-card>
+    </ng-container>
+  </book-club-carousel>
+</ng-container>

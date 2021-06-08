@@ -12,7 +12,7 @@ function* numberGenerator(): Generator<number> {
   let index = 0
 
   while (true) {
-    yield index++
+    yield ++index
   }
 }
 
