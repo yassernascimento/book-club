@@ -1,1 +1,28 @@
-<p>club-form works!</p>
+<h2 class="mat-title">Crie um novo clube</h2>
+
+<mat-divider></mat-divider>
+
+<div fxLayoutAlign="center center" fxLayout="column">
+  <mat-form-field>
+    <mat-label>Nome</mat-label>
+    <input matInput />
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Gêneros</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let genrer of []" [value]="0">
+        {{ genrer }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Descrição</mat-label>
+    <input matInput />
+  </mat-form-field>
+
+  <button mat-fab>
+    <mat-icon>add</mat-icon>
+  </button>
+</div>

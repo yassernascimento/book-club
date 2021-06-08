@@ -1,16 +1,27 @@
 <div class="container">
   <book-club-club-search></book-club-club-search>
+  <div fxLayout fxLayoutGap="2px" fxLayoutAlign="start center">
+    <h2 class="mat-subheading-1">Resultado</h2>
+    <h2 class="mat-subheading-2">da Pesquisa</h2>
+  </div>
   <book-club-club-list
-    title="Resultado da Pesquisa"
     [clubs]="(clubState.clubsFound$ | async)!"
     [loading]="(clubState.clubSearchLoading$ | async)!"
     (cardClick)="onClubSelect()"
   ></book-club-club-list>
+  <mat-divider></mat-divider>
+  <div fxLayout fxLayoutGap="2px" fxLayoutAlign="start center">
+    <h2 class="mat-subheading-1">Seus</h2>
+    <h2 class="mat-subheading-2">Clubes</h2>
+  </div>
+  <div gdColumns="3fr 1fr" fxLayoutGap="20px">
+    <book-club-club-list
+      [clubs]="MY_CLUBS"
+      (cardClick)="goToClub()"
+    ></book-club-club-list>
 
-  <book-club-club-list
-    title="Seus Clubes de Leitura"
-    [clubs]="MY_CLUBS"
-    (cardClick)="goToClub()"
-  ></book-club-club-list>
+    <book-club-club-form></book-club-club-form>
+  </div>
+
   <book-club-home-footer></book-club-home-footer>
 </div>

@@ -15,7 +15,6 @@ import { IClub } from '@book-club/models'
   templateUrl: './club-list.component.html',
 })
 export class ClubListComponent {
-  @Input() public title = 'No Title Provided'
   @Input() public clubs: IClub[] = []
   @Input() public loading = false
   @Output() public cardClick = new EventEmitter<void>()

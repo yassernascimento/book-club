@@ -7,6 +7,8 @@ import { MatMenuModule } from '@angular/material/menu'
 import { MatToolbarModule } from '@angular/material/toolbar'
 import { NgModule } from '@angular/core'
 
+import { MatDividerModule } from '@angular/material/divider'
+
 import { HomeFooterComponent, ToolbarComponent } from './components'
 import { ClubModule } from '../club/club.module'
 import { HomePageComponent } from './containers'
@@ -21,6 +23,7 @@ const MaterialModules = [
   MatBadgeModule,
   MatButtonModule,
   MatDialogModule,
+  MatDividerModule,
   MatIconModule,
   MatMenuModule,
   MatToolbarModule,

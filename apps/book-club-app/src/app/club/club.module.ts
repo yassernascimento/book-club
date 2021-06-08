@@ -60,7 +60,12 @@ const MaterialModules = [
     ClubSearchComponent,
     ClubSummaryComponent,
   ],
-  exports: [ClubListComponent, ClubSearchComponent, ClubSummaryComponent],
+  exports: [
+    ClubFormComponent,
+    ClubListComponent,
+    ClubSearchComponent,
+    ClubSummaryComponent,
+  ],
   imports: [
     AppModules,
     EffectsModule.forFeature([ClubEffects]),
