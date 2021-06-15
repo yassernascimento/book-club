@@ -23,11 +23,11 @@ import {
 } from './components'
 import { ClubEffects, clubReducer, stateKey } from './state'
 import { ClubPageComponent, ClubSummaryComponent } from './containers'
-import { BookModule } from '../book/book.module'
-import { ChatModule } from '../chat/chat.module'
-import { MeetingModule } from '../meeting/meeting.module'
-import { MemberModule } from '../member/member.module'
-import { SharedModule } from '../shared/shared.module'
+import { BookModule } from '../book'
+import { ChatModule } from '../chat'
+import { MeetingModule } from '../meeting'
+import { MemberModule } from '../member'
+import { SharedModule } from '../../shared'
 
 const routes: Routes = [{ component: ClubPageComponent, path: 'club' }]
 

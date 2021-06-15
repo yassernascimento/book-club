@@ -10,7 +10,7 @@ import {
 import { selectClubsFound, selectMyClubs } from './club.selectors'
 import { ClubSearchPayload } from './club.types'
 import { State } from '.'
-import { StateService } from '../../utils/state.service'
+import { StateService } from '../../../shared/services/state.service'
 
 @Injectable()
 export class ClubStateFacade {

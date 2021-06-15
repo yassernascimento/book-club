@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core'
 
 import { AppComponent } from './app.component'
-import { CoreModule } from './core/core.module'
-import { MainModule } from './main/main.module'
+import { CoreModule } from './core'
+import { MainModule } from './features/main'
 
 @NgModule({
   bootstrap: [AppComponent],

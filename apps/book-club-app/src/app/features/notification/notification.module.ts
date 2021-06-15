@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core'
 
 import { NotificationItemComponent } from './components'
 import { NotificationPanelComponent } from './containers'
-import { SharedModule } from '../shared/shared.module'
+import { SharedModule } from '../../shared'
 
 const AppModules = [SharedModule]
 const MaterialModules = [MatButtonModule]

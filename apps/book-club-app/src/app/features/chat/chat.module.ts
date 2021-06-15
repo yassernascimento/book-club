@@ -6,7 +6,7 @@ import { NgModule } from '@angular/core'
 
 import { ChatMessageComponent } from './components'
 import { ChatPageComponent } from './containers'
-import { SharedModule } from '../shared/shared.module'
+import { SharedModule } from '../../shared'
 
 const AppModules = [SharedModule]
 const MaterialModules = [

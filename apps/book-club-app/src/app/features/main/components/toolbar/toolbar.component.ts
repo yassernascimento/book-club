@@ -7,7 +7,7 @@ import {
 } from '@angular/core'
 import { MatDialog } from '@angular/material/dialog'
 
-import { Theme } from '../../../core/state'
+import { Theme } from '../../../../core/state'
 import { UserDetailsComponent } from '../../../user/containers'
 
 @Component({

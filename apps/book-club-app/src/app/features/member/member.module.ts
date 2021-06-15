@@ -5,7 +5,7 @@ import { MatInputModule } from '@angular/material/input'
 import { NgModule } from '@angular/core'
 
 import { MemberCardComponent, MemberListComponent } from './components'
-import { SharedModule } from '../shared/shared.module'
+import { SharedModule } from '../../shared'
 
 const AppModules = [SharedModule]
 const MaterialModules = [
